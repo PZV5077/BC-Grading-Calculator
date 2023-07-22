@@ -309,9 +309,9 @@ int main()
                 cout << "S1    S2    FINAL "<<endl;
                 print_score(f_score, max_course_name_length);
                 cout << "-----------------------------------------" <<endl;
-                cout << "S1 Average: " << s1avg << "%" << "         " << "|" << " " << "S1 GPA: " << s1gpa <<endl;
-                cout << "S2 Average: " << s2avg << "%" << "         " << "|" << " " << "S2 GPA: " << s2gpa <<endl;
-                cout << "Final Average: " << finalavg << "%" << "      " << "|" << " " << "FL GPA: " << s1gpa <<endl;
+                cout << "S1 Average:         " << s1avg << "%" << " " << "|" << " " << "S1 GPA: " << s1gpa <<endl;
+                cout << "S2 Average:         " << s2avg << "%" << " " << "|" << " " << "S2 GPA: " << s2gpa <<endl;
+                cout << "Final Average:      " << finalavg << "%" << " " << "|" << " " << "FL GPA: " << s1gpa <<endl;
                 cout << "-----------------------------------------" <<endl;
                 system("pause");
 
