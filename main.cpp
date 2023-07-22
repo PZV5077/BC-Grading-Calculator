@@ -17,7 +17,7 @@ const string options[numOptions] = {"A. Read info.txt ", "B. Analyse File", "C. 
 const int MAX_LINES = 100;
 //Variables for storing the score
 vector<vector<string>> f_score;
-float s_score[MAX_LINES][4];
+double s_score[MAX_LINES][4];
 //Variables for storing the information
 string s_name;
 string s_grade;
@@ -203,6 +203,30 @@ void print_score(vector<vector<string>> f_score, int max_course_name_length) {
     }
 }
 
+double calculate_gpa(double score) {
+    if (score >= 86) {
+        return 4.0;
+    } else if (score >= 80) {
+        return 3.7;
+    } else if (score >= 76) {
+        return 3.3;
+    } else if (score >= 72) {
+        return 3.0;
+    } else if (score >= 68) {
+        return 2.7;
+    } else if (score >= 64) {
+        return 2.3;
+    } else if (score >= 60) {
+        return 2.0;
+    } else if (score >= 55) {
+        return 1.7;
+    } else if (score >= 50) {
+        return 1.7;
+    } else {
+        return 0.0;
+    }
+}
+
 int main()    
 {    
     init();
@@ -228,15 +252,23 @@ int main()
         else if (input == 13) { // enter key
             // Handle selected option
             system("cls"); // clear the console screen
-            cout << "You selected " << options[currentOption] << endl;
-            system("pause"); // wait for user to press a key before continuing
-            
             if (options[currentOption]=="A. Read info.txt ")
             {
+                system("cls"); // clear the console screen
+                cout<<"Reading info.txt..."<<endl;
+                _sleep(1*1000);
                 read_score();
+                cout<<"Done!"<<endl;
+                system("pause");
             }
             else if (options[currentOption]=="B. Analyse File")
             {
+                system("cls"); // clear the console screen
+                cout<<"Analysing..."<<endl;
+                _sleep(0.5*1000);
+                cout<<"Done!"<<endl;
+                system("pause");
+                // Print Analyse Result
                 system("cls"); // clear the console screen
                 int max_course_name_length = 0;
                 for (auto& row : f_score) {
@@ -245,9 +277,9 @@ int main()
                     }
                 }
 
-                float s1avg = 0;
-                float s2avg = 0;
-                float finalavg = 0;
+                double s1avg = 0;
+                double s2avg = 0;
+                double finalavg = 0;
                 for (auto& row : f_score) {
                     s1avg += stof(row[2]);
                     s2avg += stof(row[3]);
@@ -256,7 +288,9 @@ int main()
                 s1avg /= f_score.size();
                 s2avg /= f_score.size();
                 finalavg /= f_score.size();
-
+                double s1gpa=calculate_gpa(s1avg);
+                double s2gpa=calculate_gpa(s2avg);
+                double finalgpa=calculate_gpa(finalavg);
                 // Print Analyse Result
                 cout << "BC Grading Calculator, Ver a0.0.1" <<endl;
                 cout << "Powered by Eric Zhang" <<endl;
@@ -275,10 +309,12 @@ int main()
                 cout << "S1    S2    FINAL "<<endl;
                 print_score(f_score, max_course_name_length);
                 cout << "-----------------------------------------" <<endl;
-                cout << "S1 Average: " << s1avg << "%" << endl;
-                cout << "S2 Average: " << s2avg << "%" << endl;
-                cout << "Final Average: " << finalavg << "%" << endl;
+                cout << "S1 Average: " << s1avg << "%" << "         " << "|" << " " << "S1 GPA: " << s1gpa <<endl;
+                cout << "S2 Average: " << s2avg << "%" << "         " << "|" << " " << "S2 GPA: " << s2gpa <<endl;
+                cout << "Final Average: " << finalavg << "%" << "      " << "|" << " " << "FL GPA: " << s1gpa <<endl;
+                cout << "-----------------------------------------" <<endl;
                 system("pause");
+
             }
             else if (options[currentOption]=="C. Output Analyse Result")
             {
