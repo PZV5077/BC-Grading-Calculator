@@ -123,6 +123,10 @@ void read_score() {
             }
         }
     }
+    //get the average of [i][1] and [i][2], store it in [i][3]
+    for (int i = 0; i < line_count; i++) {
+        s_score[i][3] = (s_score[i][1] + s_score[i][2]) / 2;
+    }
 
     // Read database.txt
     vector<pair<string, string>> courses;
@@ -262,6 +266,7 @@ int main()
                 cout << "Name: " << s_name << endl;
                 cout << "Grade: " << s_grade << endl;
                 cout << "Class: " << s_class << endl;
+                cout << "-----------------------------------------" <<endl;
                 cout << "No.     Name";
                 for(int i=0, j=1; i<max_course_name_length-3; i++)
                 {
@@ -292,4 +297,3 @@ int main()
     
     return 0;
 }
-
