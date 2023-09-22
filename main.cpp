@@ -96,7 +96,7 @@ void print_score(vector<vector<string>> f_score, int max_course_name_length);  /
 void read_score() {
     ifstream fin("info.txt");
     ifstream db("database.txt");
-    string line;
+    string line = "";
     int line_count = 0;
 
     // Read info.txt

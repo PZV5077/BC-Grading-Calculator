@@ -1,16 +1,15 @@
 //Put your score under the score label, in format shown below, course code + S1 score + S2 score
 
 [name]
-Example Name
+CEZ
 
 [grade]
-Example Grade
-
+11
 [class]
-Example Class
+17
 
 [score]
-10001 50 97
+10001 65 97
 120002 98 93.7
 1033003 98.45 97.34
 10004 97.35 91
