@@ -1,12 +1,12 @@
 //Put your score under the score label, in format shown below, course code + S1 score + S2 score
 
 [name]
-CEZ
+John Smith
 
 [grade]
-11
+10
 [class]
-17
+1
 
 [score]
 10001 65 97
