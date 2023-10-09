@@ -32,7 +32,7 @@ void init()
     system("mode con cols=100 lines=30");
 
     //set the colour of the console
-    system("color 1f");
+    system("color 2c");
 
     //set the position of the console to the centre of the screen
     system("powershell (New-Object -ComObject Shell.Application).TileHorizontally()");
@@ -256,7 +256,7 @@ int main()
             {
                 system("cls"); // clear the console screen
                 cout<<"Reading info.txt..."<<endl;
-                _sleep(1*1000);
+                //_sleep(1*1000);
                 read_score();
                 cout<<"Done!"<<endl;
                 system("pause");
@@ -265,7 +265,7 @@ int main()
             {
                 system("cls"); // clear the console screen
                 cout<<"Analysing..."<<endl;
-                _sleep(0.5*1000);
+                //_sleep(0.5*1000);
                 cout<<"Done!"<<endl;
                 system("pause");
                 // Print Analyse Result
