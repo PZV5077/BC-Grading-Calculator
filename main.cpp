@@ -21,6 +21,7 @@ double s_score[MAX_LINES][4];
 //Variables for storing the information
 string s_name;
 string s_grade;
+
 string s_class;
 //Initialize the windows
 void init()
@@ -32,7 +33,7 @@ void init()
     system("mode con cols=100 lines=30");
 
     //set the colour of the console
-    system("color 2c");
+    system("color 1f");
 
     //set the position of the console to the centre of the screen
     system("powershell (New-Object -ComObject Shell.Application).TileHorizontally()");
@@ -67,18 +68,6 @@ void displayMenu(int currentOption) {
     cout<<"BC Grading Calculator, Ver a0.0.1"<<endl;
     cout<<"Powered by Eric Zhang"<<endl;
     cout<<"----------------------------------------"<<endl;
-    /* An alternative way to display the menu
-    cout<<"----------------------------------------"<<endl;
-    cout<<"Please select the type of the assignment:"<<endl;
-    cout<<"1. Lab"<<endl;
-    cout<<"2. Homework"<<endl;
-    cout<<"3. Quiz"<<endl;
-    cout<<"4. Test"<<endl;
-    cout<<"5. Project"<<endl;
-    cout<<"6. Final Exam"<<endl;
-    cout<<"7. Exit"<<endl;
-    cout<<"----------------------------------------"<<endl;
-    */
     cout << "Select an option:" << endl << endl;
     for (int i = 0; i < numOptions; i++) {
         if (i == currentOption) {
