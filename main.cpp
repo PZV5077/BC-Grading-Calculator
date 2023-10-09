@@ -12,6 +12,7 @@
 #include <iomanip>
 using namespace std;  
 
+
 const int numOptions = 4;
 const string options[numOptions] = {"A. Read info.txt ", "B. Analyse File", "C. Output Analyse Result", "D. Exit"};
 const int MAX_LINES = 100;
