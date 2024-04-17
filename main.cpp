@@ -20,7 +20,6 @@ double s_score[MAX_LINES][4];
 //Variables for storing the information
 string s_name;
 string s_grade;
-
 string s_class;
 //Initialize the windows
 void init()
